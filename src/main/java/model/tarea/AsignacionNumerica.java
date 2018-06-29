@@ -2,7 +2,7 @@ package model.tarea;
 
 import java.util.LinkedList;
 
-public class TareaNumerica extends Tarea {
+public class AsignacionNumerica extends Asignacion {
     public void setNotas() {
         this.notas = new LinkedList<Integer>();
     }

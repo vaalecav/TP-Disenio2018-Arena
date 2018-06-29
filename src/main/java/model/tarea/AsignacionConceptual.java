@@ -3,11 +3,11 @@ package model.tarea;
 import java.util.LinkedList;
 import java.util.List;
 
-public class TareaConceptual extends Tarea {
+public class AsignacionConceptual extends Asignacion {
     private List<String>desaprobados;
     private static final String MAL= "M";
     private static final String REGULAR= "R";
-    public TareaConceptual(){
+    public AsignacionConceptual(){
         desaprobados = new LinkedList();
         desaprobados.add(MAL);
         desaprobados.add(REGULAR);

@@ -1,10 +1,15 @@
 package model;
 
+import model.tarea.Asignacion;
+
+import java.util.List;
+
 public class Estudiante {
     private String nombre;
     private String apellido;
     private String legajo;
     private String usuarioGithub;
+    private List<Asignacion> asignaciones;
 
     public Estudiante(String nombre, String apellido, String legajo, String usuarioGithub) {
         this.nombre = nombre;
