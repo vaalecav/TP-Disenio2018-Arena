@@ -1,9 +1,11 @@
 package model;
 
 import model.tarea.Asignacion;
+import org.uqbar.commons.model.annotations.Observable;
 
 import java.util.List;
 
+@Observable
 public class Estudiante {
     private String nombre;
     private String apellido;
