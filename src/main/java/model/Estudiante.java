@@ -9,15 +9,16 @@ import java.util.List;
 public class Estudiante {
     private String nombre;
     private String apellido;
-    private String legajo;
+    private int legajo;
     private String usuarioGithub;
     private List<Asignacion> asignaciones;
 
-    public Estudiante(String nombre, String apellido, String legajo, String usuarioGithub) {
+    public Estudiante(String nombre, String apellido, int legajo, String usuarioGithub, List<Asignacion> asignaciones) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.legajo = legajo;
         this.usuarioGithub = usuarioGithub;
+        this.asignaciones = asignaciones;
     }
 
     public String getNombre() {
@@ -28,7 +29,7 @@ public class Estudiante {
         return apellido;
     }
 
-    public String getLegajo() {
+    public int getLegajo() {
         return legajo;
     }
 

@@ -3,10 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>grupo-16</groupId>
     <artifactId>tp-arena</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <dependencies>
         <dependency>
             <groupId>org.uqbar-project</groupId>
@@ -20,6 +20,19 @@
         </dependency>
     </dependencies>
 
+    <repositories>
+        <repository>
+            <id>maven.uqbar.org-releases</id>
+            <name>maven.uqbar.org-releases</name>
+            <url>http://maven.uqbar.org/releases</url>
+        </repository>
+        <repository>
+            <snapshots />
+            <id>maven.uqbar.org-snapshots</id>
+            <name>maven.uqbar.org-snapshots</name>
+            <url>http://maven.uqbar.org/snapshots</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>

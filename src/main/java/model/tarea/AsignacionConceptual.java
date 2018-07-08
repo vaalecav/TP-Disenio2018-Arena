@@ -3,7 +3,13 @@ package model.tarea;
 import java.util.LinkedList;
 import java.util.List;
 
-public class AsignacionConceptual extends Asignacion {
+public class AsignacionConceptual<T> extends Asignacion {
+
+    public AsignacionConceptual (String tarea, List<T> notas) {
+        this.tarea = tarea;
+        this.notas = notas;
+    }
+
     private List<String>desaprobados;
     private static final String MAL= "M";
     private static final String REGULAR= "R";
