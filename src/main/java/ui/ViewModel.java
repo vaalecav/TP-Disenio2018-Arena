@@ -48,4 +48,11 @@ public class ViewModel {
         return usuarioGithub;
     }
 
+    public List<Asignacion> getAsignaciones() {
+        return asignaciones;
+    }
+
+    public void setAsignaciones(List<Asignacion> asignaciones) {
+        this.asignaciones = asignaciones;
+    }
 }

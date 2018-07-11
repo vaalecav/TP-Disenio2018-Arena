@@ -13,12 +13,11 @@ public class Estudiante {
     private String usuarioGithub;
     private List<Asignacion> asignaciones;
 
-    public Estudiante(String nombre, String apellido, int legajo, String usuarioGithub, List<Asignacion> asignaciones) {
+    public Estudiante(String nombre, String apellido, int legajo, String usuarioGithub) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.legajo = legajo;
         this.usuarioGithub = usuarioGithub;
-        this.asignaciones = asignaciones;
     }
 
     public String getNombre() {
@@ -37,4 +36,11 @@ public class Estudiante {
         return usuarioGithub;
     }
 
+    public List<Asignacion> getAsignaciones() {
+        return asignaciones;
+    }
+
+    public void setAsignaciones(List<Asignacion> asignaciones) {
+        this.asignaciones = asignaciones;
+    }
 }
