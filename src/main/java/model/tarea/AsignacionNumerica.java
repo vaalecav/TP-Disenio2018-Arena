@@ -15,6 +15,6 @@ public class AsignacionNumerica<T> extends Asignacion {
     }
 
     public boolean aprobo() {
-        return !notas.isEmpty() && Integer.getInteger(notas.get(notas.size()-1).toString())>5;
+        return !notas.isEmpty() && Integer.getInteger(obtenerUltimaNota())>5;
     }
 }

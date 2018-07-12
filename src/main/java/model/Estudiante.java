@@ -4,11 +4,14 @@ import model.tarea.Asignacion;
 import org.uqbar.commons.model.annotations.Observable;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Observable
 public class Estudiante {
     private String nombre;
     private String apellido;
+
+
     private int legajo;
     private String usuarioGithub;
     private List<Asignacion> asignaciones;
@@ -24,23 +27,38 @@ public class Estudiante {
         return nombre;
     }
 
+    public void setNombre(String nombre) { this.nombre = nombre; }
+
     public String getApellido() {
         return apellido;
     }
+
+    public void setApellido(String apellido) { this.apellido = apellido; }
 
     public int getLegajo() {
         return legajo;
     }
 
+    public void setLegajo(int legajo) { this.legajo = legajo; }
+
     public String getUsuarioGithub() {
         return usuarioGithub;
     }
 
-    public List<Asignacion> getAsignaciones() {
-        return asignaciones;
-    }
+    public void setUsuarioGithub(String usuarioGithub) { this.usuarioGithub = usuarioGithub; }
+
+    public List<Asignacion> getAsignaciones() { return asignaciones; }
 
     public void setAsignaciones(List<Asignacion> asignaciones) {
         this.asignaciones = asignaciones;
     }
+
+    public void agregarAsignacion(Asignacion asignacion) { this.asignaciones.add(asignacion); }
+
+    public String getMostrarNotas() {
+        return (!this.asignaciones.isEmpty() ?
+                this.asignaciones.stream().map(asignacion -> asignacion.getMostrarNota()).collect(Collectors.joining("\n"))
+                : "El alumno no posee notas ingresadas");
+    }
+
 }
