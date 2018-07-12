@@ -18,5 +18,4 @@ public class EstudianteApplication extends Application {
         ApplicationContext.getInstance().configureSingleton(Estudiante.class, new RepositorioEstudiantes());
         return new ViewNotas(this);
     }
-
 }

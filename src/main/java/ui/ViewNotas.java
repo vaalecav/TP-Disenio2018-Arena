@@ -1,10 +1,12 @@
 package ui;
 
+import model.Estudiante;
 import org.uqbar.arena.layout.VerticalLayout;
 import org.uqbar.arena.widgets.Button;
 import org.uqbar.arena.widgets.Label;
 import org.uqbar.arena.widgets.NumericField;
 import org.uqbar.arena.widgets.Panel;
+import org.uqbar.arena.windows.Dialog;
 import org.uqbar.arena.windows.SimpleWindow;
 import org.uqbar.arena.windows.WindowOwner;
 import org.uqbar.lacar.ui.model.PanelBuilder;
@@ -67,14 +69,14 @@ public class ViewNotas extends SimpleWindow<ViewModelNotas> {
                 .bindValueToProperty("errores");
     }
 
-
     public void modificarDatos() {
-        this.openDialog(new ViewEstudiante(this, this.getModelObject().getEstudiante().get()));
-    }
-
-    protected void openDialog(Dialog<?> dialog) {
-        dialog.onAccept(getModelObject()::search);
-        dialog.open();
+        if (getModelObject().getEstudiante().isPresent()) {
+            Dialog<?> dialog = new ViewEstudiante(this, getModelObject().getEstudiante().get());
+            dialog.open();
+            dialog.onAccept(() -> {});
+        } else {
+            getModelObject().setErrores("No hay estudiantes con el legajo ingresado");
+        }
     }
 }
 
