@@ -3,10 +3,12 @@ package model;
 import model.tarea.Asignacion;
 import org.uqbar.commons.model.annotations.Observable;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Observable
 public class Estudiante {
     private String nombre;
     private String apellido;
@@ -14,13 +16,14 @@ public class Estudiante {
 
     private int legajo;
     private String usuarioGithub;
-    private List<Asignacion> asignaciones;
+    private ArrayList<Asignacion> asignaciones;
 
     public Estudiante(String nombre, String apellido, int legajo, String usuarioGithub) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.legajo = legajo;
         this.usuarioGithub = usuarioGithub;
+        this.asignaciones = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -49,7 +52,7 @@ public class Estudiante {
 
     public List<Asignacion> getAsignaciones() { return asignaciones; }
 
-    public void setAsignaciones(List<Asignacion> asignaciones) {
+    public void setAsignaciones(ArrayList<Asignacion> asignaciones) {
         this.asignaciones = asignaciones;
     }
 
