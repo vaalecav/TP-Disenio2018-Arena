@@ -24,7 +24,7 @@ public class ViewModelNotas {
                 .filter(alumno -> alumno.getLegajo() == this.getLegajo())
                 .findFirst()
                 .map(Estudiante::getMostrarNotas)
-                .orElse("El legajo es incorrecto, por favor ingresar nuevamente");
+                .orElse("Legajo incorrecto");
     }
 
     // ********************************************************

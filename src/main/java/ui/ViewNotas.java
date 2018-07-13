@@ -24,8 +24,7 @@ public class ViewNotas extends SimpleWindow<ViewModelNotas> {
         this.setTitle("Estudiante: notas");
 
         mainPanel.setLayout(new VerticalLayout());
-        mainPanel.setWidth(800);
-
+        mainPanel.setWidth(1000);
         super.createMainTemplate(mainPanel);
     }
 
